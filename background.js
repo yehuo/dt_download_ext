@@ -10,8 +10,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     var timestamp=new Date().getTime();
     chrome.downloads.download({
       url: message.url,
-      filename: message.path,
-      saveAs: true,
+      // filename: 'example.mp4',
+      // saveAs: true,
     });
   }
 });

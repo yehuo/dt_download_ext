@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Button Clicker Extension",
+  "name": "Youtube video download Extension",
   "version": "1.0",
   "permissions": [
     "tabs",
@@ -14,7 +14,7 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_popup": "extension.html",
+    "default_popup": "popup.html",
     "default_icon": "icon.png"
   },
   "content_scripts": [
@@ -24,8 +24,7 @@
       "run_at": "document_idle"
     },
     {
-      "matches": ["<all_urls>"],
-      "exclude_matches": ["https://addyoutube.com/*"],
+      "matches": ["https://*.googlevideo.com/*"],
       "js": ["video_download.js","config.js"],
       "run_at": "document_idle"
     }
