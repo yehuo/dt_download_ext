@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Button Clicker Extension",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "webNavigation",
+    "downloads",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "extension.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://addyoutube.com/*"],
+      "js": ["main_page.js","config.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "exclude_matches": ["https://addyoutube.com/*"],
+      "js": ["video_download.js","config.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
