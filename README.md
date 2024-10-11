@@ -5,10 +5,11 @@
 
 # Usage
 
-1. 点击插件icon。
-2. 输入video link。例如https://www.youtube.com/watch?v=rongTS9ydQE对应的video id就是rongTS9ydQE
-3. 等待页面自动下载
-4. 关闭页面
+1. 下载repo，打开chrome extension manager，打开developer mode，使用load unpack，选中本地repo目录，点击select导入
+2. 打开chrome extension，点击插件icon
+3. 输入video link。例如https://www.youtube.com/watch?v=rongTS9ydQE对应的video id就是rongTS9ydQE
+4. 等待页面自动下载
+5. 关闭页面
 
 
 # Attention
